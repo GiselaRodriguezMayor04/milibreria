@@ -11,5 +11,5 @@ export interface MyButtonProps {
     disabled?: boolean;
     onClick?: MouseEventHandler<HTMLButtonElement>;
 }
-declare const MyButton: React.FC<MyButtonProps>;
+declare function MyButton(props: MyButtonProps): import("react/jsx-runtime").JSX.Element;
 export default MyButton;
