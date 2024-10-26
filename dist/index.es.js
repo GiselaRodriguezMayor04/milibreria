@@ -6359,24 +6359,38 @@ process.env.NODE_ENV !== "production" && (Vo.propTypes = {
    */
   variant: v.oneOfType([v.oneOf(["contained", "outlined", "text"]), v.string])
 });
-function vu(e) {
-  const { bgcolor: t, text: r, txtcolor: n, disabled: o, onClick: i, size: a } = e;
-  return (
-    //Uso el Button de la librería MUI y lo personalizo con las props que pasan a mi componente.
-    /* @__PURE__ */ Ve.jsx(
-      Vo,
-      {
-        type: "button",
-        onClick: i,
-        disabled: o,
-        size: a,
-        sx: { backgroundColor: t, color: n },
-        children: r
+const vu = ({
+  text: e,
+  txtcolor: t,
+  bgcolor: r,
+  bordercolor: n,
+  bordersize: o,
+  size: i = "medium",
+  hoverTxtColor: a,
+  hoverBgColor: c,
+  disabled: l = !1,
+  onClick: f
+}) => /* @__PURE__ */ Ve.jsx(
+  Vo,
+  {
+    type: "button",
+    onClick: f,
+    disabled: l,
+    size: i,
+    variant: "outlined",
+    sx: {
+      color: t,
+      backgroundColor: r,
+      border: `${o} solid ${n}`,
+      ":hover": {
+        backgroundColor: c,
+        color: a
       }
-    )
-  );
-}
+    },
+    children: e
+  }
+);
 export {
-  vu as CustomButton
+  vu as MyButton
 };
 //# sourceMappingURL=index.es.js.map

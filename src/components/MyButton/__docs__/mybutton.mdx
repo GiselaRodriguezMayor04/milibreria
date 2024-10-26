@@ -1,0 +1,37 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example.tsx";
+import * as MyButtonStories from "./mybutton.stories.tsx";
+
+<Meta of={MyButtonStories} title="MyButton" />
+
+# MyButton
+
+Componente de botón personalizado con varias propiedades para la personalización.
+
+#### Example - Primary
+
+<Canvas of={MyButtonStories.Primary} />
+
+## Uso
+
+```tsx
+import { MyButton } from 'milibreria';
+
+function Example() {
+  return (
+    <MyButton
+      text="Botón Primario"
+      txtcolor="black"
+      bgcolor="red"
+      bordercolor="red"
+      bordersize="2px"
+      hoverTxtColor="white"
+      hoverBgColor="blue"
+      disabled={false}
+      size="small"
+      onClick={() => alert("Botón Primario")}
+    />
+  );
+}
+
+export default Example;
