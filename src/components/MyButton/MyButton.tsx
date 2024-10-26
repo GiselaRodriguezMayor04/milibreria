@@ -1,6 +1,8 @@
+// src/components/mybutton/mybutton.tsx
 import { MouseEventHandler } from 'react';
 import Button from '@mui/material/Button';
 
+// Declaramos la interface para las props del componente
 export interface MyButtonProps {
   text: string; 
   txtcolor: string; 
@@ -14,18 +16,22 @@ export interface MyButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>; 
 }
 
-const MyButton: React.FC<MyButtonProps> = ({
-  text,
-  txtcolor,
-  bgcolor,
-  bordercolor,
-  bordersize,
-  size = 'medium', 
-  hoverTxtColor,
-  hoverBgColor,
-  disabled = false, 
-  onClick,
-}) => {
+// Definimos el componente MyButton
+function MyButton(props: MyButtonProps) {
+  // Extraemos las props
+  const {
+    text,
+    txtcolor,
+    bgcolor,
+    bordercolor,
+    bordersize,
+    size = 'medium', 
+    hoverTxtColor,
+    hoverBgColor,
+    disabled = false, 
+    onClick,
+  } = props;
+
   return (
     <Button
       type="button"
@@ -33,6 +39,7 @@ const MyButton: React.FC<MyButtonProps> = ({
       disabled={disabled}
       size={size}
       variant="outlined"
+      // Estilos personalizados con la propiedad sx de MUI
       sx={{
         color: txtcolor,
         backgroundColor: bgcolor,
