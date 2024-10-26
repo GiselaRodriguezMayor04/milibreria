@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import MyButton from '../mybutton';
+import MyButton from '../MyButton';
 
 describe('MyButton component', () => {
   it('debería renderizarse correctamente', () => {

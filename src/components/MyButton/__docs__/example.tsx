@@ -1,5 +1,5 @@
 import React from 'react';
-import MyButton, { MyButtonProps } from '../mybutton';
+import MyButton, { MyButtonProps } from '../MyButton';
 
 function Example(props: MyButtonProps) {
   return (
